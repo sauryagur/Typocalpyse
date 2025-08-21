@@ -43,7 +43,7 @@ npm run dev
 ```
 ---
 
-##🤟Contributing
+## 🤟Contributing
 
 Typocalypse welcomes all contributions as long as they make things worse.
 Add features that break typing flow.
