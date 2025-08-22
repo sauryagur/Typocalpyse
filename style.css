@@ -2,25 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom cyberpunk styles */
+/* Typocalypse Global Styles */
 @layer components {
-  .cyber-glow {
-    box-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 15px #00ff41;
+  .matrix-glow {
+    box-shadow: 0 0 5px #2B633E, 0 0 10px #2B633E, 0 0 15px #2B633E;
   }
   
-  .cyber-button {
-    @apply bg-cyber-gray border border-neon-green text-neon-green px-3 py-2 rounded-lg hover:bg-neon-green hover:text-cyber-black transition-all duration-200 cyber-glow;
+  .chaos-border {
+    border: 2px solid #2B633E;
+    box-shadow: 0 0 10px rgba(43, 99, 62, 0.3);
   }
   
-  .cyber-toggle {
-    @apply relative inline-block w-12 h-6;
-  }
-  
-  .cyber-slider {
-    @apply appearance-none bg-cyber-gray h-2 rounded-full outline-none;
-  }
-  
-  .cyber-slider::-webkit-slider-thumb {
-    @apply appearance-none w-4 h-4 bg-neon-green rounded-full cursor-pointer;
+  .chaos-text {
+    color: #2B633E;
+    text-shadow: 0 0 8px rgba(43, 99, 62, 0.6);
   }
 }
