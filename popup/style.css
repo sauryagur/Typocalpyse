@@ -1,58 +1,97 @@
-/* Custom styles for the popup */
+/* Custom styles for the popup using the provided color profile */
+/* Color palette: 
+   Rich Black: #194729 
+   Matrix Green: #2B633E 
+   Dark Gray: #5D5D5D 
+   Medium Gray: #AAAAAA 
+   Pure Black: #000000 
+*/
 
-.slider {
-  background: linear-gradient(to right, #1f2937, #00ffff);
+.glow-text {
+  text-shadow: 0 0 10px #2B633E, 0 0 20px #2B633E;
 }
 
-.slider::-webkit-slider-thumb {
+.chaos-slider {
+  background: linear-gradient(to right, #194729, #2B633E);
+  border: 1px solid #5D5D5D;
+}
+
+.chaos-slider::-webkit-slider-thumb {
   appearance: none;
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
-  background: #00ffff;
+  background: #2B633E;
   cursor: pointer;
-  border: 2px solid #000;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  border: 2px solid #AAAAAA;
+  box-shadow: 0 0 8px rgba(43, 99, 62, 0.6);
+  transition: all 0.2s;
 }
 
-.slider::-moz-range-thumb {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background: #00ffff;
-  cursor: pointer;
-  border: 2px solid #000;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+.chaos-slider::-webkit-slider-thumb:hover {
+  background: #2B633E;
+  box-shadow: 0 0 12px rgba(43, 99, 62, 0.8);
+  transform: scale(1.1);
 }
 
-.toggle {
+.chaos-slider::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #2B633E;
+  cursor: pointer;
+  border: 2px solid #AAAAAA;
+  box-shadow: 0 0 8px rgba(43, 99, 62, 0.6);
+  transition: all 0.2s;
+}
+
+.chaos-toggle {
   appearance: none;
   width: 44px;
   height: 24px;
-  background: #374151;
+  background: #5D5D5D;
   border-radius: 12px;
   position: relative;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
+  border: 1px solid #AAAAAA;
 }
 
-.toggle:checked {
-  background: #00ffff;
+.chaos-toggle:checked {
+  background: #2B633E;
+  box-shadow: 0 0 8px rgba(43, 99, 62, 0.4);
 }
 
-.toggle::before {
+.chaos-toggle::before {
   content: '';
   position: absolute;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: white;
-  top: 2px;
-  left: 2px;
-  transition: transform 0.3s;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: #AAAAAA;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.toggle:checked::before {
+.chaos-toggle:checked::before {
   transform: translateX(20px);
+  background: #FFFFFF;
+}
+
+/* Tailwind custom colors */
+@tailwind base;
+@tailwind components;  
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --rich-black: #194729;
+    --matrix-green: #2B633E;
+    --dark-gray: #5D5D5D;
+    --medium-gray: #AAAAAA;
+    --silver: #CCCCCC;
+    --pure-black: #000000;
+  }
 }

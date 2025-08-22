@@ -9,6 +9,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'rich-black': '#194729',
+        'matrix-green': '#2B633E', 
+        'dark-gray': '#5D5D5D',
+        'medium-gray': '#AAAAAA',
+        'silver': '#CCCCCC',
+        'pure-black': '#000000',
         'cyber-black': '#0a0a0a',
         'cyber-gray': '#1a1a1a',
         'neon-green': '#00ff41',
