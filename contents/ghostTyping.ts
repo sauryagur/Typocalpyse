@@ -29,7 +29,7 @@ function attachGhostTyping() {
 
 function updateConfig() {
   getConfig().then(cfg => {
-    enabled = cfg.ghostTyping
+    enabled = cfg.features.ghostTyping
     chaosLevel = cfg.chaosLevel || 0
   })
 }

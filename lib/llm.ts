@@ -88,3 +88,10 @@ export class LLMService {
     return randomEndings[Math.floor(Math.random() * randomEndings.length)];
   }
 }
+
+// Utility wrapper function for content scripts
+export async function getLLMCompletion(prompt: string, config: any): Promise<string> {
+  const llmService = new LLMService(config.llm?.apiKey || "", config.llm?.endpoint || "");
+  const result = await llmService.complete(prompt, 20);
+  return result.content;
+}

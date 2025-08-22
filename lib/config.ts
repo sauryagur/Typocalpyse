@@ -83,3 +83,14 @@ export function shouldTrigger(chaosLevel: number, baseProbability: number = 0.1)
   const intensity = getChaosIntensity(chaosLevel);
   return Math.random() < baseProbability * intensity;
 }
+
+// Utility wrapper functions for content scripts
+export async function getConfig(): Promise<ChaosConfig> {
+  const manager = ConfigManager.getInstance();
+  return await manager.loadConfig();
+}
+
+export async function setConfig(config: Partial<ChaosConfig>): Promise<void> {
+  const manager = ConfigManager.getInstance();
+  await manager.saveConfig(config);
+}

@@ -19,7 +19,7 @@ async function handleAutocomplete(e: InputEvent) {
   for (const t of triggers) {
     if (val.endsWith(t)) {
       const cfg = await getConfig()
-      if (cfg.llmApiKey) {
+      if (cfg.llm.apiKey) {
         const suggestion = await getLLMCompletion(val, cfg)
         input.value += suggestion
       } else {
@@ -38,7 +38,7 @@ function attachAutocomplete() {
 
 function updateConfig() {
   getConfig().then(cfg => {
-    enabled = cfg.autocomplete
+    enabled = cfg.features.chaoticAutocomplete
     chaosLevel = cfg.chaosLevel || 0
   })
 }
