@@ -150,6 +150,9 @@ function updateConfig() {
   getConfig().then(cfg => {
     enabled = cfg.features.chaoticAutocomplete
     chaosLevel = cfg.chaosLevel || 0
+    console.log(`Typocalypse: Autocomplete enabled=${enabled}, chaosLevel=${chaosLevel}`)
+  }).catch(error => {
+    console.error('Typocalypse: Failed to load config:', error)
   })
 }
 
