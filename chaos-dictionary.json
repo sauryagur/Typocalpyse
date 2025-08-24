@@ -1,0 +1,102 @@
+{
+    "triggers": {
+        "replace": {
+            "hello": [
+                "What's kicking, chicken?",
+                "Greetings, carbon-based chaos unit!",
+                "Howdy, partner in nonsense!"
+            ],
+            "thanks": [
+                "Thanks, now feed the ducks.",
+                "Much obliged, banana overlord.",
+                "Cheers, toaster wizard."
+            ],
+            "meeting at": [
+                "Meeting at $time or we jump on llamas.",
+                "Meeting at $time, but only if the stars align.",
+                "Meeting at $time, followed by interpretive dance."
+            ]
+        },
+        "append": [
+            "or we find some llamas",
+            "alternatively, we could eat cake",
+            "or perhaps a game of chess?",
+            "unless we are counting stars",
+            "maybe we should have a dance-off instead",
+            "unless we embrace the chaos",
+            "or we could take a nap instead",
+            "followed by a spontaneous karaoke session",
+            "but first, let's solve world hunger",
+            "or we find some llamas",
+            "alternatively, we could eat cake",
+            "or perhaps a giant pizza is needed",
+            "unless tacos are on the table",
+            "but only after ice cream",
+            "followed by a suspiciously large sandwich",
+            "or maybe just a cup of tea",
+            "unless donuts magically appear",
+            "perhaps a chocolate fountain is involved",
+            "or perhaps a game of chess?",
+            "maybe we should have a dance-off instead",
+            "followed by a spontaneous karaoke session",
+            "unless we embrace the chaos",
+            "or we could take a nap instead",
+            "unless time travel is an option",
+            "maybe a staring contest would solve this",
+            "unless the rubber duck disagrees",
+            "perhaps we consult a magic 8-ball",
+            "unless we are counting stars",
+            "or until the moon sends us an email",
+            "followed by an intergalactic road trip",
+            "until black holes start taking attendance",
+            "unless parallel universes interfere again",
+            "until someone rides in on a comet",
+            "when Mars finally joins the group chat",
+            "or Jupiter demands more coffee",
+            "but first, let's solve world hunger",
+            "until the treasure map is deciphered",
+            "after we rescue the dragon",
+            "when the squirrels overthrow the monarchy",
+            "or the pigeons finally organize a union",
+            "until we discover Atlantis (again)",
+            "when the penguins take charge",
+            "as soon as robots learn to juggle",
+            "once unicorns approve the plan",
+            "but only if deadlines stop chasing us",
+            "once we schedule a meeting about meetings",
+            "when the printer finally works correctly",
+            "unless Excel crashes again",
+            "after 3 more coffee breaks",
+            "when emails stop reproducing overnight",
+            "or once we survive Monday",
+            "until PowerPoint stops updating",
+            "unless this text appends itself again",
+            "or until the narrator interrupts us",
+            "but only if this makes sense later",
+            "unless the code has other plans",
+            "or when reality remembers its script",
+            "maybe the developer is just trolling us",
+            "perhaps this sentence never ends..."
+        ]
+},
+"behavior": {
+    "detection": {
+        "mode": "substring",
+        "case_sensitive": false
+    },
+    "timing": {
+        "debounce_ms": 1000
+    },
+    "randomness": {
+        "seed": null
+    },
+    "strategy": [
+        "check_triggers",
+        "if_no_match_append"
+    ],
+    "safeguards": {
+        "max_length": 300,
+        "avoid_duplicates": true
+    }
+}
+}

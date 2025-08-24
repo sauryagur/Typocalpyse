@@ -1,17 +1,5 @@
 # 🔮 Typocalypse
 
-**Autocomplete, but chaotic: your keyboard's worst nightmare (and our masterpiece).**
-
-## 🚀 Quick Start
-
-1. Run `pnpm dev` to start development server
-2. Open Chrome and go to `chrome://extensions/`
-3. Enable "Developer mode" and click "Load unpacked"
-4. Select the `build/chrome-mv3-dev` folder
-5. Click the extension icon to configure chaos level and features!
-
----Typocalypse
-
 **Autocomplete, but chaotic: your keyboard’s worst nightmare (and our masterpiece).**
 
 ---
@@ -54,6 +42,14 @@ npm install
 npm run dev
 ```
 ---
+
+## 🚀 Quick Start
+
+1. Run `pnpm dev` to start development server
+2. Open Chrome and go to `chrome://extensions/`
+3. Enable "Developer mode" and click "Load unpacked"
+4. Select the `build/chrome-mv3-dev` folder
+5. Click the extension icon to configure chaos level and features!
 
 ## 🤟Contributing
 
