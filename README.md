@@ -3,6 +3,10 @@
 
 ---
 
+## 🎥 Video demo
+
+https://drive.google.com/file/d/1pJUaGsv2L9SLLg1I48euou4L6TNuzOBx/view?usp=sharing
+
 ## 🧨 What fresh hell is this?
 
 Typocalypse is the browser extension nobody asked for but everyone secretly deserves. It's what happens when you take perfectly functional typing and decide "you know what this needs? More chaos."
