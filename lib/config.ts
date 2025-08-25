@@ -5,10 +5,6 @@ export interface ChaosConfig {
     ghostTyping: boolean;
     chaoticAutocomplete: boolean;
   };
-  llm: {
-    apiKey: string;
-    endpoint: string;
-  };
 }
 
 export const DEFAULT_CONFIG: ChaosConfig = {
@@ -17,11 +13,7 @@ export const DEFAULT_CONFIG: ChaosConfig = {
     wanderingCursor: true,
     ghostTyping: true,
     chaoticAutocomplete: false,
-  },
-  llm: {
-    apiKey: "",
-    endpoint: "https://openrouter.ai/api/v1/chat/completions",
-  },
+  }
 };
 
 export class ConfigManager {
