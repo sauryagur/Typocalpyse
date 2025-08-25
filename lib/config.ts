@@ -4,21 +4,32 @@ export interface ChaosConfig {
     wanderingCursor: boolean;
     ghostTyping: boolean;
     chaoticAutocomplete: boolean;
+    chaoticScroll: boolean;
+  };
+  llm?: {
+    endpoint?: string;
+    apiKey?: string;
   };
 }
 
-export const DEFAULT_CONFIG: ChaosConfig = {
-  chaosLevel: 2,
+// Default config
+export const defaultConfig: ChaosConfig = {
+  chaosLevel: 4,
   features: {
     wanderingCursor: true,
     ghostTyping: true,
-    chaoticAutocomplete: false,
-  }
-};
+    chaoticAutocomplete: true,
+    chaoticScroll: true,
+  },
+}
+
+
+// Alias in ALL CAPS for consistency if some files use it
+export const DEFAULT_CONFIG = defaultConfig;
 
 export class ConfigManager {
   private static instance: ConfigManager;
-  private config: ChaosConfig = DEFAULT_CONFIG;
+  private config: ChaosConfig = defaultConfig;
   private listeners: ((config: ChaosConfig) => void)[] = [];
 
   static getInstance(): ConfigManager {
@@ -32,7 +43,8 @@ export class ConfigManager {
     try {
       const stored = await chrome.storage.local.get("chaosConfig");
       if (stored.chaosConfig) {
-        this.config = { ...DEFAULT_CONFIG, ...stored.chaosConfig };
+        // Merge with defaults in case new fields are added later
+        this.config = { ...defaultConfig, ...stored.chaosConfig };
       }
     } catch (error) {
       console.error("Failed to load config:", error);
@@ -71,7 +83,10 @@ export function getChaosIntensity(chaosLevel: number): number {
   return Math.max(0, Math.min(1, chaosLevel / 5));
 }
 
-export function shouldTrigger(chaosLevel: number, baseProbability: number = 0.1): boolean {
+export function shouldTrigger(
+  chaosLevel: number,
+  baseProbability: number = 0.1
+): boolean {
   const intensity = getChaosIntensity(chaosLevel);
   return Math.random() < baseProbability * intensity;
 }

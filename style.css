@@ -2,17 +2,143 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Typocalypse Global Styles */
+/* === IMPORT FONTS === */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap");
+
+/* === GLOBAL PIXEL CONTAINER === */
+.pixel-container {
+  font-family: "Press Start 2P", monospace !important;
+  font-size: 11px;
+  image-rendering: pixelated;
+  color: #000;
+}
+
+/* === HEADER TITLE === */
+.pixel-title {
+  font-size: 18px !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* === CHAOS GOTHIC FONT === */
+.chaos-font {
+  font-family: "UnifrakturCook", cursive !important;
+  font-size: 16px;
+  color: #2B633E;
+  text-shadow: 0 0 8px rgba(43, 99, 62, 0.6);
+}
+
+/* === PIXEL BUTTONS === */
+.pixel-button {
+  border: 3px solid black !important;
+  border-radius: 0 !important;
+  font-size: 10px !important;
+  padding: 8px !important;
+  background: #b587ff;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+
+.pixel-button:hover {
+  background: #c66;
+  color: #a64444;
+}
+
+/* === SLIDER === */
+.chaos-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 18px;
+  background: #597cf8;
+  border: 3px solid black;
+  border-radius: 0;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+
+.chaos-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #c66;
+  border: 3px solid black;
+  image-rendering: pixelated;
+}
+
+.chaos-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #c66;
+  border: 3px solid black;
+  image-rendering: pixelated;
+}
+
+/* === FEATURE CARDS === */
+.chaos-feature-card {
+  border: 3px solid black;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9b8edb;
+  font-size: 10px;
+  image-rendering: pixelated;
+}
+
+/* === TOGGLE CHECKBOXES === */
+.chaos-toggle {
+  width: 16px;
+  height: 16px;
+  border: 3px solid black;
+  appearance: none;
+  background: white;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+
+.chaos-toggle:checked {
+  background: black;
+}
+
+/* === INPUTS === */
+.chaos-input {
+  border: 3px solid black !important;
+  border-radius: 0 !important;
+  font-family: "Press Start 2P", monospace;
+  padding: 6px !important;
+  font-size: 10px !important;
+  background: #eee;
+  color: black;
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #6a5acd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border: 3px solid #fff;
+  image-rendering: pixelated;
+}
+
+/* === MATRIX CHAOS EFFECTS (from Tailwind layer) === */
 @layer components {
   .matrix-glow {
     box-shadow: 0 0 5px #2B633E, 0 0 10px #2B633E, 0 0 15px #2B633E;
   }
-  
+
   .chaos-border {
     border: 2px solid #2B633E;
     box-shadow: 0 0 10px rgba(43, 99, 62, 0.3);
   }
-  
+
   .chaos-text {
     color: #2B633E;
     text-shadow: 0 0 8px rgba(43, 99, 62, 0.6);
